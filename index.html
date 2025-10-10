@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,51 +8,130 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      height: 100vh;
       margin: 0;
       background: #E7D1D1;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
     }
+
     .container {
+      flex: 1;
       display: flex;
       flex-direction: column;
       align-items: center;
+      padding: 20px;
+      box-sizing: border-box;
     }
+
+    .logo-container {
+      width: 400px;
+      height: 300px;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .logo-container img {
+      width: 400px;
+      display: block;
+      margin-top: -50px;
+      max-width: 100%;
+      height: auto;
+    }
+
     .description {
       max-width: 500px;
+      text-align: justify;
     }
+
+    .description h3 {
+      margin: 0;
+    }
+
     .information {
-      position: fixed;  
-      bottom: 0;
+      background: rgba(255, 255, 255, 0.3);
       display: flex;
       flex-direction: column;
-      gap: 10px;
-      align-items: left;
-      margin: 0px 0px 10px 10px;
+      gap: 8px;
+      align-items: flex-start;
+      padding: 15px;
+      box-sizing: border-box;
+    }
+
+    .information a {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      text-decoration: none;
+      color: #E1306C;
+      font-weight: 500;
+    }
+
+    .information span {
+      font-weight: 600;
+      color: #333;
+    }
+
+    /* ---- Responsive adjustments ---- */
+    @media (max-width: 600px) {
+      body {
+        font-size: 15px;
+      }
+
+      .logo-container {
+        width: 100%;
+        height: auto;
+      }
+
+      .logo-container img {
+        margin-top: 0;
+        width: 100%;
+      }
+
+      .description {
+        max-width: 100%;
+        padding: 0 10px;
+      }
+
+      .information {
+        position: relative;
+        bottom: 0;
+        width: 100%;
+        align-items: center;
+        text-align: center;
+        gap: 6px;
+      }
+
+      .information a {
+        justify-content: center;
+      }
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <div style="width: 400px; height: 300px; overflow: hidden;">
-      <img src="logo.svg" alt="Logo" style="width: 400px; display: block; margin-top: -50px;" />
+    <div class="logo-container">
+      <img src="logo.svg" alt="Logo">
     </div>
     <div class="description">
-      <h3 style="margin: 0;">L'Atelier Sauvage ouvre ses portes le jeudi 16 octobre !</h3>
+      <h3>L'Atelier Sauvage ouvre ses portes le jeudi 16 octobre !</h3>
       <p>L’Atelier Sauvage est bien plus qu’une boutique, c’est un lieu de vie où l’authenticité du passé dialogue avec la créativité du présent. Un espace vivant, à mi-chemin entre galerie et atelier, où l’on peut découvrir des objets chinés, prendre un café et papoter.</p>
       <p>Situé à Heusy, l’Atelier Sauvage prend place dans une ancienne droguerie soigneusement rénovée afin de préserver l’âme du bâtiment et d’en révéler la beauté brute et authentique, tout en l’inscrivant dans une esthétique élégante, chaleureuse et contemporaine.</p>
       <p>Dans ce lieu atypique, chaque objet a une histoire. On y trouve une sélection de mobilier et de pièces chinées, principalement du design mid-century, mais aussi des trouvailles éclectiques qui racontent le temps et les savoir-faire d’hier et d’aujourd’hui.</p>
-      <p>L’Atelier Sauvage, c’est aussi un espace où l’on peut s’arrêter, prendre un café, flâner parmi les plantes et découvrir des œuvres d’artistes et d’artisans passionnés. </p>
+      <p>L’Atelier Sauvage, c’est aussi un espace où l’on peut s’arrêter, prendre un café, flâner parmi les plantes et découvrir des œuvres d’artistes et d’artisans passionnés.</p>
     </div>
   </div>
+
   <div class="information">
-    <span style="font-weight: 600;">Jeudi et vendredi 10h-18h, samedi 10h-17h</span>
-    <a href="https://www.instagram.com/ateliersauvage_heusy/" target="_blank"
-   style="display: inline-flex; align-items: center; gap: 6px; text-decoration: none; color: #E1306C; font-family: sans-serif; font-weight: 500;">
-      <img src="Instagram_logo.svg" alt="Instagram" width="20" height="20" style="vertical-align: middle;">
+    <span>Jeudi et vendredi 10h-18h, samedi 10h-17h</span>
+    <a href="https://www.instagram.com/ateliersauvage_heusy/" target="_blank">
+      <img src="Instagram_logo.svg" alt="Instagram" width="20" height="20">
       <span>ateliersauvage_heusy</span>
     </a>
-    <span style="text-decoration: none; color: #333; font-family: sans-serif; font-weight: 600;">ateliersauvageheusy@gmail.com</span>
-    <span style="font-weight: 600;">Chaussée de Theux 59, 4802 Heusy, Belgique</span>
+    <span>ateliersauvageheusy@gmail.com</span>
+    <span>Chaussée de Theux 59, 4802 Heusy, Belgique</span>
   </div>
 </body>
 </html>
